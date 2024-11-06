@@ -1,5 +1,12 @@
 // головний файл тут нічого крім @import не писати 
 @import "./utils/vars";
+@import "./utils/mixins";
 @import "./utils/placeholder";
-@import "./components/mobileMenu";
-@import "./components/modal";
+@import "./components/header/header";
+@import "./components/menu/mobileMenu";
+@import "./components/menu/modal";
+@import "./components/main/1hero";
+@import "./components/main/2order";
+@import "./components/main/3fruits";
+@import "./components/main/4harvestEmailing";
+@import "./components/footer/footer";
