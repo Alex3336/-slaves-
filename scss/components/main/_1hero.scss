@@ -1,1 +1,50 @@
 // від .hero до .preview
+.hero{
+    display: flex;  height: 612px;
+    position: relative;  justify-content: center;
+    padding-top: 103px;
+}
+.hero-title{
+    @include title(500,28px,28px);
+    width: 335px;  height: 118px;
+    color: $white;  z-index: 1;
+    position: absolute;  text-transform: uppercase;
+    text-align: center;  margin: 0;
+    top: 50px;
+}
+.hero-img{
+    border-radius: 500px;
+    position: relative;
+}
+.button-shop{
+    @include text(500,28px,28px);  text-transform: uppercase;
+    border-radius: 50%;  border: none;
+    background-color: $white;  position: absolute;
+    height: 114px;  width: 114px;
+    color: $background-color;  bottom: -27px;
+    left: 50%;
+    transform: translate(-50%) rotate(-14deg);
+}
+.preview{
+    margin: 71px 0 80px 0;
+    display: flex;  flex-direction: column;
+    row-gap: 43px;  align-items: center;
+}
+.preview-text{
+    @include text;
+    color: $white;
+    width: 279px;
+}
+.fruit-preview{
+    width: 249px;  height: 387px;
+    border-radius: 500px;  display: flex;
+    background-color: $button-color;
+    align-items: center;  flex-direction: column;
+}
+.fruit-title, .fruit-description{
+    @include text(400,12px,14px);
+    color: $white;
+}
+.fruit-title{
+    margin: 28px 0 0 0;
+}
