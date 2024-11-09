@@ -1,4 +1,18 @@
 // .header
 .header{
     height: 50px;
+    background-color: $white;
+    align-content: center;
+}
+.logo{
+    @include text(700);
+    height: 18px;  align-items: center;
+    text-transform: uppercase;
+    color: $background-color;  margin: 0;
+    display: flex;  column-gap: 9px;
+    &::before{
+        content: "";  display: block;
+        background-image: url("/img/svg/logo.svg#svg-logo");
+        height: 16px;  width: 16px;
+    }
 }

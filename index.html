@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="/css/styles.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://cdn.jsdelivr.net/npm/modern-normalize@3.0.1/modern-normalize.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
 </head>
 <body>
     <header class="header">
@@ -16,35 +20,46 @@
                 <li class="link-item"><a href="#" class="link">How It Works</a></li>
                 <li class="link-item"><a href="#" class="link">Fruits</a></li>
                 <li class="link-item"><a href="#" class="link">Contacts</a></li>
-                <button class="market-button" data-modal-open></button>
-                <button
-                    class="menu-toggle js-open-menu"
-                    aria-expanded="false"
-                    aria-controls="mobile-menu"
-                    >
-                    <svg>
-                        <use href="/img/symbol-defs.svg#svg-menu">
-                        </use>
-                    </svg>
-                </button>
+                <li>
+                    <button class="market-button" data-modal-open>
+                        <svg><use href="/img/svg/market.svg"></use></svg>
+                    </button>
+                </li>
             </ul>
+            <button
+                class="menu-toggle js-open-menu"
+                aria-expanded="false"
+                aria-controls="mobile-menu"
+            >
+                <svg class="menu-svg">
+                    <use href="/img/svg/menu.svg#svg-menu"></use>
+                </svg>
+            </button>
         </div>
     </header>
     <main class="main">
         <div class="hero">
-            <h1 class="title">
-                fresh harvest box is your One-stop place for a delicious fruit basket
+            <h1 class="hero-title">
+                fresh harvest box<br> is your 0ne-stop place for a delicious fruit basket
             </h1>
-            <img class="hero-img" src="">
+            <img
+                class="hero-img" 
+                src="/img/hero.png"
+                srcset="/img/hero@2x.png 2x"
+            >
             <button class="button-shop">shop now</button>
         </div>
         <div class="preview">
             <p class="preview-text">
                 Our expertly curated fruit baskets are made with the freshest, highest quality fruits available. Whether you are looking for a healthy snack or a gift for a loved one, Fresh Harvest Box has got you covered.
             </p>
-            <div class="fruit-item">
+            <div class="fruit-preview">
                 <p class="fruit-title">Fruit</p>
-                <img class="fruit-img" src="">
+                <img 
+                    class="fruit-img" 
+                    src="/img/melon.png"
+                    srcset="/img/melon@2x.png 2x"
+                >
                 <p class="fruit-description">
                     Refreshing and juicy, watermelon is the perfect summer treat and a great source of hydration
                 </p>
@@ -65,7 +80,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="fruit-item">
+            <div class="fruit-preview">
                 <p class="fruit-title">Fruit</p>
                 <img class="fruit-img" src="">
                 <p class="fruit-description">
@@ -213,16 +228,11 @@
         <div class="logo-item">
             <p class="logo">fresh harvest box</p>
         </div>
-        <
-        ass="link-list">
-
-        class="link-item"><a href="#" class="link">How It Works</a></li>
-
- class="link-item"><a href="#" class="link">Fruits</a></li>
-
- class="link-item"><a href="#" class="link">Contacts</a></li>
-        
-
+        <ul class="footer-link-list">
+            <li><a href="#" class="link">How It Works</a></li>
+            <li><a href="#" class="link">Fruits</a></li>
+            <li><a href="#" class="link">Contacts</a></li>
+        </ul>
         <div class="svg-list">
             <div class="svg"></div>
             <div class="svg"></div>
