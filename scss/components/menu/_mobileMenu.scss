@@ -21,7 +21,7 @@
 }
 .menu-container.is-open {
     transform: translateX(0);
-    background-color: $background-color;
+    background-color: $red;
 }
 .menu-toggle {
     height: 24px;  width: 24px;
@@ -32,8 +32,8 @@
     cursor: pointer;  border: none;
 }
 .menu-svg{
-    max-width: 24px;
-    max-height: 24px;
+    max-width: 20px;
+    max-height: 14px;
 }
 .mobile-menu{
     display: flex;
