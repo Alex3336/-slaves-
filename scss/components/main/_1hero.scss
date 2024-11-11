@@ -21,12 +21,11 @@
     border-radius: 50%;  border: none;
     background-color: $white;  position: absolute;
     height: 114px;  width: 114px;
-    color: $background-color;  bottom: -27px;
+    color: $red;  bottom: -27px;
     left: 50%;
     transform: translate(-50%) rotate(-14deg);
 }
 .preview{
-    margin: 71px 0 80px 0;
     display: flex;  flex-direction: column;
     row-gap: 43px;  align-items: center;
 }
@@ -34,17 +33,59 @@
     @include text;
     color: $white;
     width: 279px;
+    margin: 0;
 }
 .fruit-preview{
     width: 249px;  height: 387px;
     border-radius: 500px;  display: flex;
-    background-color: $button-color;
+    background-color: $green;
     align-items: center;  flex-direction: column;
-}
-.fruit-title, .fruit-description{
-    @include text(400,12px,14px);
-    color: $white;
+    &:nth-child(2){
+        .fruit-img{
+            margin: 61px 0 2px 0;
+        }
+        .fruit-description{
+            width: 150px;
+        }
+    }
+    &:nth-child(4){
+        background-color: $yellow;
+        .fruit-img{
+            margin: 19px 0 17px 0;
+        }
+        .fruit-description{
+            width: 163px;
+        }
+    }
 }
 .fruit-title{
-    margin: 28px 0 0 0;
+    @include text(400,12px,14px);
+    color: $white;  margin: 0;
+    text-align: center;
+}
+.fruit-title{
+    margin-top: 28px;
+}
+.fruit-description{
+    @include text(500,12px,14px);
+    color: $white;  margin: 0;
+    text-align: center;  text-transform: uppercase;
+}
+
+.hashtag-list{
+    display: flex;  flex-direction: row;
+    flex-wrap: wrap;  justify-content: center;
+    align-items: center;  gap: 8px;
+    margin: 0;
+}
+.hashtag-item{
+    width: 125px;  height: 38px;
+    border-radius: 20px;  border: 1px solid $white;
+    display: flex;  align-items: center;
+    justify-content: center;
+}
+.hashtag{
+    @include text(500, 12px, 14px);
+    text-transform: uppercase;
+    color: $white;
 }

@@ -1,1 +1,58 @@
 // .order-guide
+.order-guide{
+    display: flex;  flex-direction: column;
+    gap: 44px;  align-items: center;
+}
+.order-label{
+    display: flex;  flex-direction: column;
+    gap: 14px;  align-items: center;
+}
+.order-title{
+    @include title(500, 28px, 28px);  margin: 0;
+    text-align: center;  text-transform: uppercase;
+    color: $white;
+}
+.order-text{
+    @extend .order-title;
+    @include text;
+    height: 90px;  text-transform: none;
+}
+
+.step-list{
+    margin: 0;
+    display: flex;  gap: 20px;
+    flex-wrap: nowrap;  flex-direction: column;
+}
+.step-item{
+    width: 335px;  height: 112px;
+    background-color: $white;
+    display: flex;  flex-direction: row;
+    align-items: center;  border-radius: 20px;
+    column-gap: 14px;  padding-inline: 20px;
+    &:nth-child(2){
+        .step-number{
+            background-color: $green;
+        }
+    }
+    &:nth-child(3){
+        .step-number{
+            background-color: $yellow;
+        }
+    }
+}
+.step-number{
+    width: 136px;  height: 48px;
+    display: flex;  justify-content: center;
+    align-items: center;  background-color: $red;
+    border-radius: 30px;  color: white;
+}
+.step-text{
+    @include text;
+    width: 145px;  margin: 0;
+}
+.gif-container{
+    width: 335px;  height: 476px;
+    background-image: url(/img/blueberry.gif);
+    background-position: 35%;
+    border-radius: 20px;
+}
