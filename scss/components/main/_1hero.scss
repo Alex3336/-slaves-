@@ -9,7 +9,7 @@
     width: 335px;  height: 118px;
     color: $white;  z-index: 1;
     position: absolute;  text-transform: uppercase;
-    text-align: center;  margin: 0;
+    text-align: center;  
     top: 50px;
 }
 .hero-img{
@@ -33,42 +33,42 @@
     @include text;
     color: $white;
     width: 279px;
-    margin: 0;
+    
 }
-.fruit-preview{
+.preview-fruit{
     width: 249px;  height: 387px;
     border-radius: 500px;  display: flex;
-    background-color: $green;
     align-items: center;  flex-direction: column;
     &:nth-child(2){
-        .fruit-img{
+        background-color: $green;
+        .preview-img{
             margin: 61px 0 2px 0;
         }
-        .fruit-description{
+        .preview-description{
             width: 150px;
         }
     }
     &:nth-child(4){
         background-color: $yellow;
-        .fruit-img{
+        .preview-img{
             margin: 19px 0 17px 0;
         }
-        .fruit-description{
+        .preview-description{
             width: 163px;
         }
     }
 }
-.fruit-title{
+.preview-title{
     @include text(400,12px,14px);
-    color: $white;  margin: 0;
+    color: $white;  
     text-align: center;
 }
-.fruit-title{
+.preview-title{
     margin-top: 28px;
 }
-.fruit-description{
+.preview-description{
     @include text(500,12px,14px);
-    color: $white;  margin: 0;
+    color: $white;  
     text-align: center;  text-transform: uppercase;
 }
 
@@ -76,7 +76,7 @@
     display: flex;  flex-direction: row;
     flex-wrap: wrap;  justify-content: center;
     align-items: center;  gap: 8px;
-    margin: 0;
+    
 }
 .hashtag-item{
     width: 125px;  height: 38px;

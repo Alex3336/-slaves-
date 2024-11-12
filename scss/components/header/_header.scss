@@ -13,7 +13,7 @@
     @include text(700);
     height: 18px;  align-items: center;
     text-transform: uppercase;
-    color: $red;  margin: 0;
+    color: $red;
     display: flex;  column-gap: 9px;
     &::before{
         content: "";  display: block;
