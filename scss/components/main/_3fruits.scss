@@ -1,1 +1,93 @@
 // .assortment
+.assortment{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 44px;
+}
+.organic{
+    display: flex;  align-items: center;
+    gap: 14px;  flex-direction: column
+}
+.organic-title{
+    @include title(500, 28px, 28px);
+    color: $white;
+    text-align: center;
+}
+.organic-text{
+    @include text;
+    color: $white;
+}
+.fruit-list{
+    display: flex;  flex-direction: column;
+    align-items: center;  row-gap: 14px;
+}
+.fruit-item{
+    width: 335px;  height: 465px;
+    border-radius: 20px;  padding: 25px 20px;
+    display: flex;  flex-direction: column;
+    align-items: flex-start;  justify-content: flex-end;
+    @media screen and (max-width:1279px){
+        &:nth-child(n+7){
+            display: none;
+        }
+    }
+}
+$fruit-item-list: (
+                   ":nth-child(1)": #F8766B,
+                   ":nth-child(2)": #EDD251,
+                   ":nth-child(3)": #9DC262,
+                   ":nth-child(4)": #BFD663,
+                   ":nth-child(5)": #E93F29,
+                   ":nth-child(6)": #DB4F4B,
+                   ":nth-child(7)": #9B5366,
+                   ":nth-child(8)": #F47F4C,
+                   ":nth-child(9)": #98B37E,
+                   );
+@each $pseudo, $background-color in $fruit-item-list{
+    .fruit-list .fruit-item#{$pseudo}{
+        background-color: $background-color;
+    }
+}
+.fruit-name{
+    @include title(700, 24px, 28px);
+    color: $white;
+    margin-right: 4px;  margin-bottom: 8px;
+}
+.plant{
+    @include text;
+    color: $white;  margin-right: 4px;
+}
+.fruit-img{
+    width: 295px;  height: 251px;
+    margin: 4px 0 26px 0;
+}
+.cta-button{
+    @include text(500);
+    width: 126px;  border-radius: 200px;
+    height: 42px;  padding: 12px 24px;
+    border: none;  color: $red;
+}
+.order-button{
+    @include text(500);
+    width: 80px;  height: 80px;
+    border-radius: 200px;  border: none;
+    transform: rotate(-14deg);
+    color: $white;  background-color: $green;
+    display: flex;  flex-direction: row;
+    position: relative;  justify-content: center;
+}
+.order-text{
+    display: flex;  align-items: center;
+    padding-bottom: 6px;
+    position: relative;
+    &::before{
+        content: "";
+        background-image: url(/img/svg/arrov.svg);
+        width: 14px;  height: 14px;
+        display: block;
+        position: absolute;
+        transform: rotate(14deg);
+        left: -18px;
+    }
+}

@@ -8,7 +8,7 @@
     gap: 14px;  align-items: center;
 }
 .order-title{
-    @include title(500, 28px, 28px);  margin: 0;
+    @include title(500, 28px, 28px);  
     text-align: center;  text-transform: uppercase;
     color: $white;
 }
@@ -19,7 +19,7 @@
 }
 
 .step-list{
-    margin: 0;
+    
     display: flex;  gap: 20px;
     flex-wrap: nowrap;  flex-direction: column;
 }
@@ -48,7 +48,7 @@
 }
 .step-text{
     @include text;
-    width: 145px;  margin: 0;
+    width: 145px;  
 }
 .gif-container{
     width: 335px;  height: 476px;
