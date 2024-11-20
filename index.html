@@ -13,32 +13,30 @@
 </head>
 <body>
     <header class="header">
-        <div class="container">
-            <nav class="navbar">
-                <div class="logo-item">
-                    <p class="logo">fresh harvest box</p>
-                </div>
-                <ul class="menu">
-                    <li class="link-item"><a href="#" class="link">How It Works</a></li>
-                    <li class="link-item"><a href="#" class="link">Fruits</a></li>
-                    <li class="link-item"><a href="#" class="link">Contacts</a></li>
-                    <li>
-                        <button class="market-button">
-                            <svg><use href="/img/svg/market.svg"></use></svg>
-                        </button>
-                    </li>
-                </ul>
-                <button
-                    class="menu-toggle js-open-menu"
-                    aria-expanded="false"
-                    aria-controls="mobile-menu"
-                >
-                    <svg class="menu-svg">
-                        <use href="/img/svg/menu.svg#svg-menu"></use>
-                    </svg>
-                </button>
-            </nav>
-        </div>
+        <nav class="navbar">
+            <div class="logo-item">
+                <p class="logo">fresh harvest box</p>
+            </div>
+            <ul class="menu">
+                <li class="link-item"><a href="#" class="link">How It Works</a></li>
+                <li class="link-item"><a href="#" class="link">Fruits</a></li>
+                <li class="link-item"><a href="#" class="link">Contacts</a></li>
+                <li>
+                    <button class="market-button">
+                        <svg><use href="/img/svg/market.svg#svg-market"></use></svg>
+                    </button>
+                </li>
+            </ul>
+            <button
+                class="menu-toggle js-open-menu"
+                aria-expanded="false"
+                aria-controls="mobile-menu"
+            >
+                <svg class="menu-svg">
+                    <use href="/img/svg/menu.svg#svg-menu"></use>
+                </svg>
+            </button>
+        </nav>
     </header>
     <main class="main">
         <div class="container">
@@ -362,12 +360,10 @@
         </div>
     </footer>
     <div class="menu-container js-menu-container" id="mobile-menu">
-        <div class="container">
-            <ul class="mobile-menu">
-                <li class="menu-item"><a class="menu-link" href="#">How It Works</a></li>
-                <li class="menu-item"><a class="menu-link" href="#">Fruits</a></li>
-                <li class="menu-item"><a class="menu-link" href="#">Contacts</a></li>
-            </ul>
+        <nav class="navbar">
+            <div class="logo-item">
+                <p class="logo">fresh harvest box</p>
+            </div>
             <button class="menu-toggle js-close-menu">
                 <svg
                     class="menu-decoration"
@@ -383,6 +379,85 @@
                     ></path>
                 </svg>
             </button>
+        </nav>
+        <div class="container">
+            <ul class="mobile-menu">
+                <li class="menu-item"><a class="menu-link" href="#">How It Works</a></li>
+                <li class="menu-item"><a class="menu-link" href="#">Fruits</a></li>
+                <li class="menu-item"><a class="menu-link" href="#">Contacts</a></li>
+                <li class="menu-item">
+                    <button class="market-button" data-modal-open>
+                        <svg style="width: 20px; height: 18px;">
+                            <path
+                            fill="#FFF" 
+                            fill-rule="evenodd" 
+                            d="M7.612 3.084C7.16 3.711 7 4.494 7 5v1h6V5c0-.507-.16-1.289-.611-1.916C11.974 2.508 11.274 2 10 2c-1.274 0-1.974.508-2.388 1.084ZM15 6V5c0-.827-.24-2.044-.988-3.084C13.226.825 11.926 0 10 0 8.074 0 6.774.825 5.988 1.916 5.24 2.956 5 4.173 5 5v1H1a1.00003 1.00003 0 0 0-1 1 1 1 0 0 0 1 1h.095l.91 9.1A1.00002 1.00002 0 0 0 3 18h14c.2479 0 .487-.0921.6708-.2584a.99972.99972 0 0 0 .3242-.6416l.91-9.1H19a.99997.99997 0 0 0 1-1 .99997.99997 0 0 0-1-1h-4Zm-8 5a.99997.99997 0 0 0-1-1 .99997.99997 0 0 0-1 1v2a.99997.99997 0 0 0 1 1 .99997.99997 0 0 0 1-1v-2Zm4 0c0-.2652-.1054-.5196-.2929-.7071A1.0001 1.0001 0 0 0 10 10a.99997.99997 0 0 0-1 1v2a.99997.99997 0 0 0 1 1c.2652 0 .5196-.1054.7071-.2929A1.0001 1.0001 0 0 0 11 13v-2Zm4 0c0-.2652-.1054-.5196-.2929-.7071A1.0001 1.0001 0 0 0 14 10c-.2652 0-.5196.1054-.7071.2929A1.0001 1.0001 0 0 0 13 11v2c0 .2652.1054.5196.2929.7071S13.7348 14 14 14c.2652 0 .5196-.1054.7071-.2929A1.0001 1.0001 0 0 0 15 13v-2Z" 
+                            clip-rule="evenodd"
+                            ></path>
+                        </svg>
+                    </button>
+                    <div class="backdrop is-hidden" data-modal>
+                        <div class="modal">
+                            <div class="top-modal">
+                                <h2 class="modal-title">Your Order</h2>
+                                <button class="modal-close" data-modal-close>
+                                    <svg class="cross">
+                                        <use href="/img/svg/cross.svg#cross"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                            <ul class="modal-order-list">
+                                <li class="modal-order-item">
+                                    <h3 class="modal-order-title">Strawberry Basket</h3>
+                                    <p class="modal-order-text">Plant</p>
+                                    <img 
+                                        class="modal-order-img" 
+                                        src="/img/strawberry-basket-modal.png"
+                                        srcset="/img/strawberry-basket-modal@2x.png 2x"    
+                                    >
+                                    <label class="modal-order-label">
+                                        <input class="modal-order-checkbox" type="checkbox">
+                                        <span class="modal-order-check"></span>
+                                    </label>
+                                </li>
+                                <li class="modal-order-item">
+                                    <h3 class="modal-order-title">Apple Basket</h3>
+                                    <p class="modal-order-text">Plant</p>
+                                    <img 
+                                        class="modal-order-img" 
+                                        src="/img/apple-box-modal.png"
+                                        srcset="/img/apple-box-modal@2x.png 2x"    
+                                    >
+                                    <label class="modal-order-label">
+                                        <input class="modal-order-checkbox" type="checkbox">
+                                        <span class="modal-order-check"></span>
+                                    </label>
+                                </li>
+                                <li class="modal-order-item">
+                                    <h3 class="modal-order-title">Fruits Basket</h3>
+                                    <p class="modal-order-text"">Plant</p>
+                                    <img 
+                                        class="modal-order-img" 
+                                        src="/img/fruit-bowl-modal.png"
+                                        srcset="/img/fruit-bowl-modal@2x.png 2x"    
+                                    >
+                                    <label class="modal-order-label">
+                                        <input class="modal-order-checkbox" type="checkbox">
+                                        <span class="modal-order-check"></span>
+                                    </label>
+                                </li>
+                            </ul>
+                            <form class="modal-form">
+                                <input placeholder="Enter full name..." class="form-input" type="text">
+                                <input placeholder="Enter email..." class="form-input"  type="email">
+                                <input placeholder="Enter card.." class="form-input"  type="text">
+                                <textarea class="comment" placeholder="Enter comments..."></textarea>
+                                <button class="send-button">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                </li>
+            </ul>
         </div>
     </div>
     <script src="/js/mobile-menu.js"></script>

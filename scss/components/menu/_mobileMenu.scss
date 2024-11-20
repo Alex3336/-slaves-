@@ -14,11 +14,6 @@
     z-index: 999;
     transform: translateX(100%);
 }
-.menu-container > .container{
-    width: 78px;  height: 126px;
-    justify-content: flex-start;    align-content: space-between;
-    flex-direction: row;
-}
 .menu-container.is-open {
     transform: translateX(0);
     background-color: $red;
@@ -34,14 +29,26 @@
 .menu-svg{
     max-width: 20px;
     max-height: 14px;
+    fill: $red;
+}
+.menu-decoration{
+    fill: $red;
 }
 .mobile-menu{
     display: flex;
-    flex-direction: column;
-    row-gap: 16px;
+    flex-direction: column;  align-items: center;
+    row-gap: 16px;  justify-content: center;
+    margin-top: 124px; 
 }
 .menu-link{
-    font-size: 40px;
-    line-height: 46.88px;
-    letter-spacing: 0.02em;
+    @include text(400,14px,18px);
+    color: $white;
+}
+.market-button{
+    background: none;
+    border: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
