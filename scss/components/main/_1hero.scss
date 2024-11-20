@@ -16,6 +16,26 @@
     border-radius: 500px;
     position: relative;
 }
+.hero-img-border{
+    position: relative;
+    padding: 20px; /* Відступи для контенту */
+    z-index: 1; /* Піднімемо елемент над псевдоелементом */
+    &::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: -10px;
+        z-index: -1; 
+        border-radius: 500px;
+        background: 
+            linear-gradient(
+                359.94deg, #FFFFFF -1.7%, 
+                rgba(255, 255, 255, 0.441769) 30.64%, 
+                rgba(255, 255, 255, 0) 76.92%);
+    }
+}
 .button-shop{
     @include text(500,28px,28px);  text-transform: uppercase;
     border-radius: 50%;  border: none;
@@ -24,6 +44,7 @@
     color: $red;  bottom: -27px;
     left: 50%;
     transform: translate(-50%) rotate(-14deg);
+    z-index: 1;
 }
 .preview{
     display: flex;  flex-direction: column;

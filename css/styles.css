@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .header {
   height: 50px;
   background-color: #FFF;
@@ -367,6 +368,23 @@ ul {
   position: relative;
 }
 
+.hero-img-border {
+  position: relative;
+  padding: 20px; /* Відступи для контенту */
+  z-index: 1; /* Піднімемо елемент над псевдоелементом */
+}
+.hero-img-border::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: -10px;
+  z-index: -1;
+  border-radius: 500px;
+  background: linear-gradient(359.94deg, #FFFFFF -1.7%, rgba(255, 255, 255, 0.441769) 30.64%, rgba(255, 255, 255, 0) 76.92%);
+}
+
 .button-shop {
   font-weight: 500;
   font-size: 28px;
@@ -387,6 +405,7 @@ ul {
   left: 50%;
   -webkit-transform: translate(-50%) rotate(-14deg);
           transform: translate(-50%) rotate(-14deg);
+  z-index: 1;
 }
 
 .preview {
@@ -839,8 +858,6 @@ ul {
   height: 80px;
   border-radius: 200px;
   border: none;
-  -webkit-transform: rotate(-14deg);
-          transform: rotate(-14deg);
   color: #FFF;
   background-color: #A4CB66;
   display: -webkit-box;
@@ -854,19 +871,18 @@ ul {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-}
-
-.order-text {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-bottom: 6px;
-  position: relative;
 }
-.order-text::before {
+
+.order-button-text {
+  position: relative;
+  -webkit-transform: rotate(-14deg);
+          transform: rotate(-14deg);
+  margin-left: 8px;
+}
+.order-button-text::before {
   content: "";
   background-image: url(/img/svg/arrov.svg);
   width: 14px;
@@ -876,4 +892,14 @@ ul {
   -webkit-transform: rotate(14deg);
           transform: rotate(14deg);
   left: -18px;
+}
+
+.fresh-box-h1 {
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 32px;
+  letter-spacing: -0.04em;
+  text-underline-position: from-font;
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
 }/*# sourceMappingURL=styles.css.map */

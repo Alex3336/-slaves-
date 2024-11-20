@@ -72,15 +72,15 @@ $fruit-item-list: (
     @include text(500);
     width: 80px;  height: 80px;
     border-radius: 200px;  border: none;
-    transform: rotate(-14deg);
     color: $white;  background-color: $green;
     display: flex;  flex-direction: row;
     position: relative;  justify-content: center;
+    align-items: center;
 }
-.order-text{
-    display: flex;  align-items: center;
-    padding-bottom: 6px;
+.order-button-text{
     position: relative;
+    transform: rotate(-14deg);
+    margin-left: 8px;
     &::before{
         content: "";
         background-image: url(/img/svg/arrov.svg);
