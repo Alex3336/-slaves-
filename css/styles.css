@@ -1175,4 +1175,37 @@ a {
   text-align: center;
   width: 140px;
   margin-top: 14px;
+}
+
+.order-button:hover {
+  background-color: #FFF;
+  cursor: pointer;
+}
+.order-button:hover .order-button-text {
+  color: #A4CB66;
+  position: relative;
+  -webkit-transform: rotate(-14deg);
+          transform: rotate(-14deg);
+  margin-left: 8px;
+}
+.order-button:hover .order-button-text::before {
+  content: "";
+  background-image: url(/img/svg/arrov-hover.svg);
+  width: 14px;
+  height: 14px;
+  display: block;
+  position: absolute;
+  -webkit-transform: rotate(14deg);
+          transform: rotate(14deg);
+  left: -18px;
+}
+
+.button-shop:hover {
+  background-color: #FFF;
+  color: #A4CB66;
+  cursor: pointer;
+}
+
+.svg:hover {
+  background-color: rgba(174, 19, 50, 0.1);
 }/*# sourceMappingURL=styles.css.map */

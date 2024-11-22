@@ -1,0 +1,27 @@
+.order-button:hover{
+    background-color: $white;
+    cursor: pointer;
+    .order-button-text{
+        color: $green;
+        position: relative;
+        transform: rotate(-14deg);
+        margin-left: 8px;
+        &::before{
+            content: "";
+            background-image: url(/img/svg/arrov-hover.svg);
+            width: 14px;  height: 14px;
+            display: block;
+            position: absolute;
+            transform: rotate(14deg);
+            left: -18px;
+        }
+    }
+}
+.button-shop:hover{
+    background-color: $white;
+    color: $green;
+    cursor: pointer;
+}
+.svg:hover{
+    background-color: rgba($red,0.1);
+}
