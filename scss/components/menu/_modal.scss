@@ -6,7 +6,7 @@
     height: 100%;
     width: 100%;
     background-color: rgba($black ,0.2);
-    z-index: 2;
+    z-index: 6;
 }
 .is-hidden{
     opacity: 0;
@@ -14,99 +14,140 @@
 }
 .modal{
     position: absolute;    background-color: $white;
-    width: 450px;    height: 609px;
+    width: 335px;    height: 903px;
     top: 50%;    left: 50%;
-    transform: translate(-50%, -50%);    padding: 40px;
-    z-index: 1;
+    transform: translate(-50%, -50%);    padding: 20px;
+    z-index: 5;
+    display: flex;  flex-direction: column;
+    align-items: center;  row-gap: 40px;
+    overflow: auto;  border-radius: 20px;
+}
+.top-modal{
+    display: flex;  flex-direction: row;
+    align-items: center;  justify-content: space-between;
+    width: 100%;
 }
 .modal-close{
     cursor: pointer;
-    position: absolute;
     background-color: $white;
     padding: 0;
     width: 30px;
     height: 30px;
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;
-    right: 8px;
-    top: 8px;
+    right: 20px;
+    top: 20px;
+    display: flex;
+    align-items: center;  justify-content: center;
+    .cross{
+        fill: $red;
+        width: 24px; height: 24px;
+    }
 }
-.cross{
-    width: 11px;
-    height: 11px;
-    transition-property: fill;
+.modal-title{
+    @include text(500,28px,28px);  top: 20px;
+    left: 20px;  color: $red;
+    text-transform: uppercase;
 }
+
+.modal-order-list{
+    display: flex;  width: 100%;
+    flex-direction: column;  align-items: center;
+    row-gap: 12px;
+}
+.modal-order-item{
+    width: 100%;  height: 119px;
+    position: relative;  border-radius: 20px;
+    padding: 20px;
+    &:first-child{
+        background-color: #F8766B;
+    }
+    &:nth-child(2){
+        background-color: #EDD251;
+    }
+    &:last-child{
+        background-color: #9DC262;
+    }
+}
+.modal-order-title{
+    @include text(700,18px,24px);
+    color: $white;
+    display: block;
+    width: max-content;
+    min-width: 105px;
+}
+.modal-order-text{
+    @include text(400,14px,18px);
+    color: $white;
+    display: block;
+    width: min-content;
+}
+.modal-order-img{
+    position: absolute;
+    top: 16px;  right: 32px;
+}
+.modal-order-label{
+    display: block;
+    cursor: pointer;
+    .modal-order-checkbox{
+        opacity: 0;
+        width: 16px;  height: 16px;
+    
+    }
+    .modal-order-check{
+        position: absolute;
+        top: 0;  left: 0;
+        height: 16px;  width: 16px;
+        border: 1.5px solid $white;  border-radius: 4px;
+        left: 265px;  top: 14px;
+        &:after{
+            content: "";
+            position: absolute;
+            display: none;
+        }
+    }
+    .modal-order-checkbox:checked ~ .modal-order-check:after{
+        display: block;
+    }
+    .modal-order-check:after{
+        left: 4px;
+        top: 4px;
+        width: 6px;
+        height: 6px;
+        background-image: url(/img/svg/checked.svg);
+    }
+}
+
 .modal-form{
     display: flex;
     gap: 10px;
     flex-direction: column;
-}
-.form-title{
-    font-size: 20px;
-    line-height: 23.44px;
-    letter-spacing: 0.03em;
-    text-align: center;
-}
-.form-label{
-    height: 58px;
-    display: block;
-    position: relative;
-}
-.comment-label{
-    height: 141px;
-}
-.modal-icon-div{
-    width: 18px;
-    height: 18px;
-    position: absolute;
-    bottom: 11px;
-    left: 11px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.modal-icon{
-    width: 18px;
-    height: 18px;
-    position: absolute;
-    left: 11px;
-    bottom: 11px;
-    transition-property: fill;
-}
-.form-text{
-    margin-bottom: 4px;
+    width: 100%;
 }
 .form-input{
     cursor: pointer;
     width: 100%;
-    height: 40px;
-    border: 1px solid;
-    border-radius: 4px;
-    padding: 0;
-    padding-left: 41px;
-    transition-property: border-color;
+    height: 46px;
+    border: 1px solid #D9D9D9;
+    border-radius: 100px;
+    padding-left: 20px;
+    outline:none;
 }
 .comment{
     width: 100%;
-    height: 120px;
-    padding: 0;
+    height: 132px;
+    padding: 20px 0 0 20px;
     resize: none;
-    border: 1px solid ;
-    padding: 13px 0 0 16px;
-}
-.contract{
-    display: flex;
-    margin-top: 10px;
-    margin-bottom: 20px;
-    justify-content: start;    align-items: center;
-    height: 24px;
-}
-.contract-text{
-    margin-left: 8px;
-}
-.contract-link{
-    position: relative;
+    border: 1px solid #D9D9D9;
+    border-radius: 20px;
+    outline:none;
 }
 .send-button{
-    margin: auto;
+    @include text(400,14px,18px);
+    padding: 12px 24px;
+    background-color: #9DC262;
+    border: none;
+    border-radius: 100px;
+    width: 92px;
+    color: $white;
 }

@@ -1,1 +1,24 @@
 // від .covered до .form-container
+.covered{
+    position: relative;
+    height: 529px;  width: 335px;
+    display: flex;  flex-direction: column;
+    align-items: center;  margin-bottom: 80px;
+}
+.fresh-box-title{
+    @include title(500,32px,32px);
+    color: $white;
+    text-align: center;
+    text-transform: uppercase;
+    position: absolute;
+    top: 0;  z-index: 1;
+}
+.fresh-box-img{
+    position: absolute;
+    bottom: 0;
+}
+.form-container{
+    @media screen and (max-width:1279px) {
+        display: none;
+    }
+}
