@@ -542,6 +542,13 @@ a {
   -webkit-transform: translate(-50%) rotate(-14deg);
           transform: translate(-50%) rotate(-14deg);
   z-index: 3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
 }
 
 .preview {
